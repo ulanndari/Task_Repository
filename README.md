@@ -1,6 +1,6 @@
 # Cek Kabisat dan Hitung Hari dengan Python🗓️
 ________________________________________________
-### Program lengkap: cek kabisat dan hitung hari dengan Lopp(pyhton)
+### Program lengkap: cek kabisat dan hitung hari dengan Loop(pyhton)
 ##### Program ini memungkinkan pengguna untuk belajar:
 ✅ Memasukkan tanggal secara interaktif dengan validasi input
 🔁 Mengecek status tahun kabisat dari 2 tahun sebelum hingga 2 tahun sesudah tahun input
