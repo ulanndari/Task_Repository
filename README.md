@@ -26,6 +26,6 @@ ___________________________________________
 📚 Aplikasi Sejarah dan Pendidikan
 
 Saya baru menyelesaikan program Python sederhana untuk mengecek tahun kabisat dan hari dari tanggal input. Kamu Belajar Python sambil ngoding soal kalender juga?
-Coba lihat programku: [] 
+Coba lihat programku: ![klik](https://github.com/ulanndari/Task_Repository/blob/main/task_repostpry.html?raw=true) 
 Bisa tebak hari lahirmu jatuh di hari apa? 😄
 
