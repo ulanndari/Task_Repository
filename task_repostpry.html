@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Cek Kabisat dan Hitung Hari</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 30px;
+            background-color:
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        pre {
+            background-color:
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .output {
+            background-color: 
+            border-left: 4px solid 
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Program: Cek Tahun Kabisat dan Hitung Hari</h1>
+
+    <h2>Deskripsi</h2>
+    <p>
+        kita akan menginput tanggal, bulan, dan tahun. Program akan memvalidasi input tersebut, 
+        mengecek apakah beberapa tahun di sekitar tahun input merupakan tahun kabisat, dan menggunakan algoritma 
+        <strong>Zeller’s Congruence</strong> untuk menentukan hari dalam minggu dari tanggal tersebut.
+    </p>
+
+    <h2>Penjelasan Kode Python</h2>
+    <pre><code>
+def validasi_input():
+    while True:
+        try:
+            tanggal = int(input("Masukkan tanggal (1-31): "))
+            if tanggal &lt; 1 or tanggal &gt; 31:
+                print("Tanggal harus antara 1 dan 31!")
+                continue
+            bulan = int(input("Masukkan bulan (1-12): "))
+            if bulan &lt; 1 or bulan &gt; 12:
+                print("Bulan harus antara 1 dan 12!")
+                continue
+            tahun = int(input("Masukkan tahun: "))
+            if tahun &lt; 1:
+                print("Tahun harus positif!")
+                continue
+            return tanggal, bulan, tahun
+        except ValueError:
+            print("Harus masukkan angka!")
+
+# Minta input valid
+print("Masukkan tanggal untuk cek hari dan kabisat:")
+tanggal, bulan, tahun = validasi_input()
+
+# Cek kabisat untuk rentang tahun
+print("\nCek tahun kabisat untuk rentang tahun:")
+for i in range(tahun - 2, tahun + 3):
+    if (i % 4 == 0 and i % 100 != 0) or (i % 400 == 0):
+        print(f"Tahun {i} adalah tahun kabisat!")
+    else:
+        print(f"Tahun {i} bukan tahun kabisat!")
+
+# Zeller’s Congruence untuk hitung hari
+if bulan == 1 or bulan == 2:
+    bulan += 12
+    tahun -= 1
+K = tahun % 100
+J = tahun // 100
+h = (tanggal + ((13 * (bulan + 1)) // 5) + K + (K // 4) + (J // 4) - 2 * J) % 7
+print("\nHasil perhitungan hari:")
+if h == 0:
+    print(f"Tanggal {tanggal}/{bulan}/{tahun} adalah hari Sabtu!")
+elif h == 1:
+    print(f"Tanggal {tanggal}/{bulan}/{tahun} adalah hari Minggu!")
+elif h == 2:
+    print(f"Tanggal {tanggal}/{bulan}/{tahun} adalah hari Senin!")
+elif h == 3:
+    print(f"Tanggal {tanggal}/{bulan}/{tahun} adalah hari Selasa!")
+elif h == 4:
+    print(f"Tanggal {tanggal}/{bulan}/{tahun} adalah hari Rabu!")
+elif h == 5:
+    print(f"Tanggal {tanggal}/{bulan}/{tahun} adalah hari Kamis!")
+else:
+    print(f"Tanggal {tanggal}/{bulan}/{tahun} adalah hari Jumat!")
+    </code></pre>
+
+    <h2>Penjelasan Naratif</h2>
+    <ul>
+        <li><strong>Validasi Input:</strong> Program terus meminta input tanggal, bulan, dan tahun sampai pengguna memasukkan angka yang valid.</li>
+        <li><strong>Pengecekan Kabisat:</strong> Dilakukan untuk 5 tahun, dari dua tahun sebelum hingga dua tahun setelah tahun yang dimasukkan pengguna.</li>
+        <li><strong>Perhitungan Hari:</strong> Menggunakan rumus Zeller untuk menentukan hari dari tanggal yang dimasukkan.</li>
+    </ul>
+
+    <h2>Contoh Output</h2>
+    <div class="output">
+        Masukkan tanggal untuk cek hari dan kabisat:<br>
+        Masukkan tanggal (1-31): 1<br>
+        Masukkan bulan (1-12): 6<br>
+        Masukkan tahun: 2025<br><br>
+
+        Cek tahun kabisat untuk rentang tahun:<br>
+        Tahun 2023 bukan tahun kabisat!<br>
+        Tahun 2024 adalah tahun kabisat!<br>
+        Tahun 2025 bukan tahun kabisat!<br>
+        Tahun 2026 bukan tahun kabisat!<br>
+        tahun 2027 bukan tahun kabisat!<br>
+
+        Hasil perhitungan hari:<br>
+        Tanggal 1/6/2025 adalah hari minggu!
+    </div>
+
+</body>
+</html>
