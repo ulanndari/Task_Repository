@@ -1,12 +1,12 @@
 # Cek Kabisat dan Hitung Hari dengan Python🗓️
 ________________________________________________
 ### Program lengkap: cek kabisat dan hitung hari dengan Loop(pyhton)
-##### Program ini memungkinkan pengguna untuk belajar:
-✅ Memasukkan tanggal secara interaktif dengan validasi input
-🔁 Mengecek status tahun kabisat dari 2 tahun sebelum hingga 2 tahun sesudah tahun input
-📆 Menghitung hari dalam seminggu dari tanggal tertentu menggunakan Zeller’s Congruence
-🧠 Mengasah logika pemrograman dasar: loop, kondisi, dan perhitungan kalender
-### Ditugas saya kali ini banyak yang dapt kita pelajari bersama tentang bagaimana validasi input:
+### Program ini memungkinkan pengguna untuk belajar:
+1. ✅ Memasukkan tanggal secara interaktif dengan validasi input
+2. 🔁 Mengecek status tahun kabisat dari 2 tahun sebelum hingga 2 tahun sesudah tahun input
+3. 📆 Menghitung hari dalam seminggu dari tanggal tertentu menggunakan Zeller’s Congruence
+4. 🧠 Mengasah logika pemrograman dasar: loop, kondisi, dan perhitungan kalender
+### Ditugas kali ini banyak yang dapat kita pelajari bersama tentang bagaimana validasi input:
 1. if, Digunakan untuk mengecek kondisi pertama. Jika benar, maka blok kode dijalankan.
 2. elif (else if), Digunakan jika ingin mengecek kondisi tambahan lainnya (setelah if). Bisa digunakan lebih dari satu kali.
 3. else, Digunakan sebagai jalan terakhir, jika semua kondisi sebelumnya tidak terpenuhi.
